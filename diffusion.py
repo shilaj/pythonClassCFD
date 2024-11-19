@@ -7,11 +7,11 @@ from copy import deepcopy
 temperature_left: float = 300.0 # Temperature at the left boundary in Kelvin
 temperature_right: float = 273.0 # Temperature at the right boundary in Kelvin
 L: float = 1.0 # Length of the rod in meters
-alpha: int = 1
-dt: float = 0.001
-dx: float = 0.05 
-t_initial: float = 0.0
-t_final: float = 0.05
+alpha: int = 1 # Thermal diffusivity
+dt: float = 0.001 # Time step size
+dx: float = 0.05  # Grid spacing
+t_initial: float = 0.0 # Initial time
+t_final: float = 0.05 # Final time
 
 x = numpy.arange(0, L+dx, dx).round(2) # Grid points and grid spacing
 
