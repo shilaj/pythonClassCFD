@@ -114,8 +114,8 @@ def animate_combined_solutions(x: np.ndarray) -> None:
 
         # Convert plot to image
         fig.canvas.draw()
-        image = np.frombuffer(fig.canvas.tostring_rgb(), dtype='uint8')
-        image = image.reshape(fig.canvas.get_width_height()[::-1] + (3,))
+        image = np.frombuffer(fig.canvas.buffer_rgba(), dtype='uint8')
+        image = image.reshape(fig.canvas.get_width_height()[::-1] + (4,))
         images_list.append(image)
         plt.close(fig)  # Close the figure to save memory
     
